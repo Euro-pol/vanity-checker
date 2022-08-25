@@ -12,7 +12,7 @@ def write(word):
         f.write(word + "\n")
 
 def check(checkstring):
-    r = requests.get("https://canary.discord.com/api/v9/invites/" + checkstring)
+    r = requests.get("https://discord.com/api/v9/invites/" + checkstring)
     if (r.status_code == 200):
         print(Fore.RED + "discord.gg/" + checkstring + " is taken!")
     elif (r.status_code == 404):
